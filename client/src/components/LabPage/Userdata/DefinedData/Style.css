@@ -1,0 +1,28 @@
+.containerD{
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    color: aliceblue;
+    background-color: rgb(20, 20, 20);
+}
+
+.Mini h4{
+    margin-top: 2px;
+    position: relative;
+    
+}
+.User h4{
+    margin-top: 2px;
+    position: relative;
+}
+.mini{
+    display: flex;
+    flex-direction:column ;
+    
+}
+#country{
+    margin: 10px;
+}
