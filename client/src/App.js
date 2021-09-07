@@ -1,9 +1,11 @@
 import React from'react';
+
+import Labpage from './components/LabPage/Labpage';
+//import memories from './images';
+
 const App=()=>{
     return(
-<div>
-    <h1>App</h1>
-</div>
+       <Labpage/>
     );
 }
 
