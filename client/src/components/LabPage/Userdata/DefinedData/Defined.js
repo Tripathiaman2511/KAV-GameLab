@@ -1,29 +1,179 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './Style.css'
+import axios from 'axios';
 
 const Defined=()=>{
-    return(
-        <>
-       <div className="containerD">
-            <div className="Mini">
-                <h4>Minimum Requirment</h4>
-                <div className="mini">
-                <input className="dupli" type="text" id="country" name="country" value="Operating System"readonly></input>
-                <input type="text" id="country" name="country" value="RAM" readonly></input>
-                <input type="text" id="country" name="country" value="Processor" readonly></input>
-                <input type="text" id="country" name="country" value="Graphic Card" readonly></input>
-                </div>
-                
-            </div>
-            <div className="User"><h4>User Provided</h4><div><select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    </select></div></div>
-       </div>
-        </>
 
+/* left side */
+const [names, setNames] = useState([]);
+const [text,setText]=useState('');
+const [suggestions, setSuggestions] = useState([]);
+const[ram,setRam] = useState('');
+const[os,setOS] = useState('');
+const[GC,setGC] = useState('');
+const[cpu,setCPU] = useState('');
+
+/* right side */
+const [userOS, setUserOS] = useState([]);
+const [usertext1, setUsertext1] = useState('');
+
+const [userCPU, setUserCPU] = useState([]);
+const [usertext2, setUsertext2] = useState('');
+
+const [userRAM, setUserRAM] = useState([]);
+const [usertext3, setUsertext3] = useState('');
+
+const [userGPU, setUserGPU] = useState([]);
+const [usertext4, setUsertext4] = useState('');
+
+/* *********************************************************************************************************************************************** */
+useEffect(() => {
+   const loadName=async()=>{
+       const response =await axios.get('http://localhost:8000/game')
+       setNames(response.data)  
+    }
+    const loadOS=async()=>{
+        const response =await axios.get('http://localhost:8000/OS')
+        setUserOS(response.data)
+        
+    }
+    const loadCPU=async()=>{
+        const response =await axios.get('http://localhost:8000/CPU')
+        setUserCPU(response.data)  
+    }
+    const loadRAM=async()=>{
+        const response =await axios.get('http://localhost:8000/RAM')
+        setUserRAM(response.data)  
+    }
+    const loadGC=async()=>{
+        const response =await axios.get('http://localhost:8000/GPU')
+        setUserGPU(response.data)  
+    }  
+    
+   loadName();
+   loadOS();
+   loadCPU();
+   loadRAM();
+   loadGC();
+  
+   
+}, [])
+/* extracting index of searched name */
+const indexof=names.findIndex((name,index)=>{  
+    return name.Name===text 
+     })
+
+/* Search data after entering text  */
+const onChaneHandler =(text)=>{
+    let matches=[]
+    if(text.length>0){
+        var letterNumber = /^[0-9a-zA-Z]+$/;
+        if(text.match(letterNumber)){
+            matches=names.filter(name=>{
+                const regex=new RegExp(`${text}`,"gi");
+                return name.Name.match(regex)
+            })
+        } 
+    }
+
+    /* suggestion list will be feild with matches  */
+    setSuggestions(matches)
+    setText(text)
+}
+
+const onSuggestHandler=(text)=>{
+    setText(text);
+    setSuggestions([]);   
+}
+
+const onpoplateHandler=()=>{
+    if(text){setCPU(names[indexof].Specs.CPU);
+        setOS(names[indexof].Specs.OS);
+        setRam(names[indexof].Specs.RAM);
+        setGC(names[indexof].Specs.GraphicCard)}    
+}
+
+const clear=()=>{
+    setText('');
+    setSuggestions([]);
+    setCPU('');
+    setGC('');
+    setOS('');
+    setRam('');    
+}
+
+
+/* *************************************************************************************************************************************8 */
+
+
+
+
+
+    return(
+        <><div className="container-F">
+       <div className="containerD">
+           <div className="left-handle">
+               <h4>MINIMUM REQUIREMENT</h4>
+               <div className="input-area">
+                   
+                   <div className="search">
+                        <input type="text"  className="search-data" placeholder="Enter the game name" onChange={e=>onChaneHandler(e.target.value)} value={text}  />
+                        <button className="search-button" onClick={onpoplateHandler} >Search</button>
+                        <button className="clear-button"onClick={clear}>Clear</button>
+                        <div className="float">
+                            {suggestions && suggestions.map((suggestion,i)=>
+                        <div className="dataSet" key={i} onClick={()=>onSuggestHandler(suggestion.Name)}>{suggestion.Name}</div>                                
+                        )}
+                        </div>
+                       
+                        
+                   </div>
+                   
+                   <div className="input">
+                        <input className="read-only-section" type="text" id="os"  value={os} placeholder="Operating System" readOnly />
+                        <input className="read-only-section" type="text" id="cpu" value={cpu} placeholder="Processor" readOnly />
+                        <input className="read-only-section" type="text" id="ram" value={ram} placeholder="RAM" readOnly />
+                        <input className="read-only-section" type="text" id="gc" value={GC} placeholder="Graphic Card" readOnly />
+                   </div>
+                  
+               </div>
+           </div>
+
+           <div className="right-handle">
+            <h4>YOUR PREFERENCE</h4>
+            
+            <div className="input-area-right">
+            <div className="userOS">
+                    <select  id="select0" className="select" onChange={(e)=>{setUsertext1(e.target.value)}}>
+                    {userOS.map((data1,i)=><option key={i} className="option">{data1}</option>)}
+                    </select>
+            </div>
+            
+             <div className="userCPU">
+                    <select  id="select1" className="select" onChange={(e)=>{setUsertext2(e.target.value)}}>
+                    {userCPU.map((data2,i)=><option key={i} className="option">{data2.name}</option>)}
+                    </select>
+            </div>
+            
+            <div className="userRAM">
+                    <select  id="select2" className="select" onChange={(e)=>{setUsertext3(e.target.value)}}>
+                    {userRAM.map((data3,i)=><option key={i} className="option">{data3.name}</option>)}
+                    </select>
+            </div>
+            <div className="userGC">
+                    <select  id="select3" className="select" onChange={(e)=>{setUsertext4(e.target.value)}}>
+                    {userGPU.map((data4,i)=><option key={i} className="option">{data4.name}</option>)}
+                    </select>
+            </div>
+            
+            </div>
+           </div>
+          
+       </div>
+       <div className="upload"><button className="upload-button">check ability</button></div>
+       </div>
+       
+        </>
     );
 }
 export default Defined;
