@@ -1,0 +1,160 @@
+{
+    "game": [
+  {
+        "id":1,
+        "Name":"Valorant",
+        "Specs":{
+            "RAM":"4GB",
+            "OS":"Windows",
+            "CPU":"i3",
+            "GraphicCard":"Nvidia 1650"
+        }
+    },
+    {
+        "id":2,
+        "Name":"axioss",
+        "Specs":{
+            "RAM":"2GB",
+            "OS":"Windows",
+            "CPU":"i4",
+            "GraphicCard":"Nvidia 1650"
+        }
+    },
+    {
+        "id":3,
+        "Name":"Apex legend",
+        "Specs":{
+            "RAM":"3GB",
+            "OS":"Windows",
+            "CPU":"i2",
+            "GraphicCard":"Nvidia 1650"
+        }
+    },
+    {
+        "id":4,
+        "Name":"Pubg",
+        "Specs":{
+            "RAM":"1GB",
+            "OS":"Windows",
+            "CPU":"i1",
+            "GraphicCard":"Nvidia 1650"
+        }
+    },
+    {
+        "id":5,
+        "Name":"cod",
+        "Specs":{
+            "RAM":"3GB",
+            "OS":"Windows",
+            "CPU":"i7",
+            "GraphicCard":"Nvidia 1650"
+        }
+    }
+    ],
+    "RAM":[{"name":"Select your choice","Score":0},
+    {"name":"Ripjaws 4 DDR4 2400 C14 8x16GB","Score":1},
+    {"name":"Trident Z DDR4 3200 C14 4x16GB","Score":2},
+    {"name":"Ballistix Sport DDR4 2400 C16 8x4GB","Score":3},
+    {"name":"Ballistix Elite DDR4 3600 C16 4x8GB","Score":4},
+    {"name":"Flare X DDR4 3200 C14 4x8GB","Score":5},
+    {"name":"Trident Z DDR4 3200 C15 4x16GB","Score":6},
+    {"name":"Dominator DDR4 3000 C15 4x16GB","Score":7},
+    {"name":"Trident Z DDR4 3600 C16 2x8GB","Score":8},
+    {"name":"Vengeance LPX DDR4 3600 C18 2x16GB","Score":9},
+    {"name":"Flare X DDR4 3200 C14 2x8GB","Score":10}
+
+    
+
+    ],
+    "GPU": [
+        {"name":"Select your choice","Score":0},
+    {
+     "name": "NVIDIA GeForce RTX 3090",
+     "Score": 1
+    },
+    {
+     "name": "NVIDIA GeForce RTX 3080 Ti",
+     "Score": 2
+    },
+    {
+     "name": "AMD Radeon 6900 XT",
+     "Score": 3
+    },
+    {
+     "name": "AMD Radeon RX 6800 XT",
+     "Score": 4
+    },
+    {
+     "name": "NVIDIA Quadro RTX A6000",
+     "Score": 5
+    },
+    {
+     "name": "NVIDIA GeForce RTX 3080",
+     "Score": 6
+    },
+    {
+     "name": "AMD Radeon RX 6800",
+     "Score": 7
+    },
+    {
+     "name": "NVIDIA Titan RTX",
+     "Score": 8
+    },
+    {
+     "name": "NVIDIA GeForce RTX 2080 Ti",
+     "Score": 9
+    },
+    {
+     "name": "NVIDIA GeForce RTX 3070 Ti",
+     "Score": 10
+    }
+    ],
+    "CPU": [
+        {"name":"Select your choice","Score":0},
+  {
+  "name": "AMD Ryzen 9 5950X",
+  "Score": 1
+  },
+  {
+  "name": "Intel Core i9-10900K Processor",
+  "Score": 2
+  },
+  {
+  "name": "Intel Core i9-10900KF Processor",
+  "Score": 3
+  },
+  {
+  "name": "Intel Core i9-10850K Processor",
+  "Score": 4
+  },
+  {
+  "name": "AMD Ryzen 9 5900X",
+  "Score": 5
+  },
+  {
+  "name": "AMD Ryzen 9 3950X",
+  "Score": 6
+  },
+  {
+  "name": "Intel Core i9-9960X Processor",
+  "Score": 7
+  },
+  {
+  "name": "Intel Core i9-11900K Processor",
+  "Score": 8
+  },
+  {
+  "name": "Intel Core i9-7980XE Processor",
+  "Score": 9
+  },
+  {
+  "name": "Intel Core i9-10900 Processor",
+  "Score": 10
+  }
+    ],
+    "OS":[
+        "windows",
+        "linux",
+        "mac"
+    ]
+}
