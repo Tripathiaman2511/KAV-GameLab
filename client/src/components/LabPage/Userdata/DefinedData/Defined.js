@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import './Style.css'
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 const Defined=()=>{
 
@@ -63,6 +64,19 @@ const indexof=names.findIndex((name,index)=>{
     return name.Name===text 
      })
 
+const indexos=userOS.findIndex((osvalue,index)=>{
+    return osvalue.name===usertext1
+})
+const indexram=userRAM.findIndex((ramvalue,index)=>{
+    return ramvalue.name===usertext3
+})
+const indexcpu=userCPU.findIndex((cpuvalue,index)=>{
+    return cpuvalue.name===usertext2
+})
+const indexGC=userGPU.findIndex((GCvalue,index)=>{
+    return GCvalue.name===usertext4
+})
+     
 /* Search data after entering text  */
 const onChaneHandler =(text)=>{
     let matches=[]
@@ -87,10 +101,12 @@ const onSuggestHandler=(text)=>{
 }
 
 const onpoplateHandler=()=>{
-    if(text){setCPU(names[indexof].Specs.CPU);
-        setOS(names[indexof].Specs.OS);
-        setRam(names[indexof].Specs.RAM);
-        setGC(names[indexof].Specs.GraphicCard)}    
+    if(text){
+        setCPU(names[indexof].Specs.CPU[0].name);
+        setOS(names[indexof].Specs.OS[0].name);
+        setRam(names[indexof].Specs.RAM[0].name);
+        setGC(names[indexof].Specs.GraphicCard[0].name)
+    }    
 }
 
 const clear=()=>{
@@ -104,7 +120,43 @@ const clear=()=>{
 
 
 /* *************************************************************************************************************************************8 */
-
+const addValue=()=>{
+    const[cpuscore, ramscore, GCscore, osscore]=[names[indexof].Specs.CPU[0].Score, names[indexof].Specs.RAM[0].Score, names[indexof].Specs.GraphicCard[0].Score, names[indexof].Specs.OS[0].Score]
+    const [usercpuscore, userramscore, userGCscore, userosscore]=[userCPU[indexcpu].Score , userRAM[indexram].Score, userGPU[indexGC].Score, userOS[indexos].Score]
+    
+    var resultChecker={
+        'system':{
+            os,
+            ram,
+            cpu,
+            GC
+        },
+        'user':{
+            usertext1,
+            usertext2,
+            usertext3,
+            usertext4
+        }
+    }
+    var score={
+        'system':{
+           cpuscore,
+           ramscore,
+           GCscore,
+           osscore
+        },
+        'user':{
+            usercpuscore, 
+            userramscore, 
+            userGCscore, 
+            userosscore
+        }
+    }
+    sessionStorage.setItem("valuetobeChecked",JSON.stringify(resultChecker))
+    sessionStorage.setItem("valuetoget",JSON.stringify(score))
+    console.log(resultChecker)
+    console.log(score)
+}
 
 
 
@@ -145,7 +197,7 @@ const clear=()=>{
             <div className="input-area-right">
             <div className="userOS">
                     <select  id="select0" className="select" onChange={(e)=>{setUsertext1(e.target.value)}}>
-                    {userOS.map((data1,i)=><option key={i} className="option">{data1}</option>)}
+                    {userOS.map((data1,i)=><option key={i} className="option">{data1.name}</option>)}
                     </select>
             </div>
             
@@ -153,6 +205,7 @@ const clear=()=>{
                     <select  id="select1" className="select" onChange={(e)=>{setUsertext2(e.target.value)}}>
                     {userCPU.map((data2,i)=><option key={i} className="option">{data2.name}</option>)}
                     </select>
+                   
             </div>
             
             <div className="userRAM">
@@ -170,7 +223,7 @@ const clear=()=>{
            </div>
           
        </div>
-       <div className="upload"><button className="upload-button">check ability</button></div>
+       <NavLink  to="../Result" onClick={addValue}>check ability</NavLink>
        </div>
        
         </>
