@@ -6,17 +6,16 @@ const Labpage=()=>{
     return(
 <>
 <Router>
-    <div><Switch>
+    <div>
+        <Switch>
             <Route exact path="/home">
                 <Defined/> 
             </Route >
-            <Route exact path="/result">
+            <Route exact path="/Result">
                 <Result/> 
             </Route >
         </Switch>
-        
-        </div>
-    
+    </div>
 </Router>
      
 </>
