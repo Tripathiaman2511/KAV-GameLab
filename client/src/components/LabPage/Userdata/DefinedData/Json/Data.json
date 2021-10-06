@@ -14,17 +14,61 @@
             }],
             "CPU":[{
                 "name":"Intel Core 2 Duo E8400",
-                "Score":0
+                "Score":-1
             }],
             "GraphicCard":[{
                 "name":"Intel HD 4000",
-                "Score":0
+                "Score":-1
             }]
         }
     },
     {
         "id":2,
         "Name":"Fortnite",
+        "Specs":{
+            "RAM":[{
+                "name":"8 GB",
+                "Score":0
+            }],
+            "OS":[{
+                "name":"Windows 7/8/10-64-bit",
+                "Score":0
+            }],
+            "CPU":[{
+                "name":"Intel Core i5-7300HQ",
+                "Score":111
+            }],
+            "GraphicCard":[{
+                "name":"AMD Radeon R9 280",
+                "Score":-1
+            }]
+        }
+    },
+    {
+        "id":3,
+        "Name":"PUBG",
+        "Specs":{
+            "RAM":[{
+                "name":"8 GB",
+                "Score":0
+            }],
+            "OS":[{
+                "name":"Windows 7/8/10-64-bit",
+                "Score":0
+            }],
+            "CPU":[{
+                "name":"Intel Core i5-4460",
+                "Score":-1
+            }],
+            "GraphicCard":[{
+                "name":"NVIDIA GeForce GTX 960",
+                "Score":-1
+            }]
+        }
+    },
+    {
+        "id":4,
+        "Name":"GTA-5",
         "Specs":{
             "RAM":[{
                 "name":"4 GB",
@@ -35,122 +79,65 @@
                 "Score":0
             }],
             "CPU":[{
-                "name":"Intel Core i3-2100",
-                "Score":111
+                "name":"Intel Core i3-6100 Processor",
+                "Score":-1
             }],
             "GraphicCard":[{
-                "name":"Intel HD 4000",
-                "Score":0
+                "name":" NVIDIA GeForce GTX 960",
+                "Score":-1
             }]
         }
     }
     ],
     "RAM":[
         {"name":"Select your choice","Score":0},
-        {"name":"128 GB","Score":1},
-        {"name":"96 GB","Score":2},
-        {"name":"64 GB","Score":3},
-        {"name":"32 GB","Score":4},
-        {"name":"16 GB","Score":5},
-        {"name":"14 GB","Score":6},
-        {"name":"12 GB","Score":7},
-        {"name":"10 GB","Score":8},
-        {"name":"8 GB","Score":9},
-        {"name":"6 GB","Score":10},
-        {"name":"5 GB","Score":11},
-        {"name":"4 GB","Score":12},
-        {"name":"3 GB","Score":13},
-        {"name":"2 GB","Score":14},
-        {"name":"1 GB","Score":15},
-        {"name":"512 MB","Score":16},
-        {"name":"256 MB","Score":17},
-        {"name":"128 MB","Score":18}
+        {"name":"128 MB","Score":1},
+        {"name":"256 MB","Score":2},
+        {"name":"512 MB","Score":3},
+        {"name":"1 GB","Score":4},
+        {"name":"2 GB","Score":5},
+        {"name":"3 GB","Score":6},
+        {"name":"4 GB","Score":7},
+        {"name":"5 GB","Score":8},
+        {"name":"6 GB","Score":9},
+        {"name":"8 GB","Score":10},
+        {"name":"10 GB","Score":11},
+        {"name":"12 GB","Score":12},
+        {"name":"14 GB","Score":13},
+        {"name":"16 GB","Score":14},
+        {"name":"32 GB","Score":15},
+        {"name":"64 GB","Score":16},
+        {"name":"96 GB","Score":17},
+        {"name":"128 GB","Score":18}
+        
     ],
     "GPU": [
         {"name":"Select your choice","Score":0},
-    {
-     "name": "NVIDIA GeForce RTX 3090",
-     "Score": 1
-    },
-    {
-     "name": "NVIDIA GeForce RTX 3080 Ti",
-     "Score": 2
-    },
-    {
-     "name": "AMD Radeon 6900 XT",
-     "Score": 3
-    },
-    {
-     "name": "AMD Radeon RX 6800 XT",
-     "Score": 4
-    },
-    {
-     "name": "NVIDIA Quadro RTX A6000",
-     "Score": 5
-    },
-    {
-     "name": "NVIDIA GeForce RTX 3080",
-     "Score": 6
-    },
-    {
-     "name": "AMD Radeon RX 6800",
-     "Score": 7
-    },
-    {
-     "name": "NVIDIA Titan RTX",
-     "Score": 8
-    },
-    {
-     "name": "NVIDIA GeForce RTX 2080 Ti",
-     "Score": 9
-    },
-    {
-     "name": "NVIDIA GeForce RTX 3070 Ti",
-     "Score": 10
-    }
+        { "name": "NVIDIA GeForce RTX 3070", "Score": 1 },
+        { "name": "NVIDIA GeForce RTX 2080 Ti", "Score": 2 },
+        { "name": "NVIDIA Titan RTX", "Score": 3 },
+        { "name": "AMD Radeon RX 6800", "Score": 4 },
+        { "name": "NVIDIA GeForce RTX 3080", "Score": 5 }, 
+        { "name": "NVIDIA Quadro RTX A6000", "Score": 6 }, 
+        { "name": "AMD Radeon RX 6800 XT", "Score": 7 },
+        { "name": "AMD Radeon 6900 XT", "Score": 8 },
+        { "name": "NVIDIA GeForce RTX 3080 Ti", "Score": 9 },
+        {"name": "NVIDIA GeForce RTX 3090","Score": 10}
+    
     ],
     "CPU": [
     {"name":"Select your choice","Score":0},
-    {
-    "name": "AMD Ryzen 9 5950X",
-    "Score": 1
-    },
-    {
-    "name": "Intel Core i9-10900K Processor",
-    "Score": 2
-    },
-    {
-    "name": "Intel Core i9-10900KF Processor",
-    "Score": 3
-    },
-    {
-    "name": "Intel Core i9-10850K Processor",
-    "Score": 4
-    },
-    {
-    "name": "AMD Ryzen 9 5900X",
-    "Score": 5
-    },
-    {
-    "name": "AMD Ryzen 9 3950X",
-    "Score": 6
-    },
-    {
-    "name": "Intel Core i9-9960X Processor",
-    "Score": 7
-    },
-    {
-    "name": "Intel Core i9-11900K Processor",
-    "Score": 8
-    },
-    {
-    "name": "Intel Core i9-7980XE Processor",
-    "Score": 9
-    },
-    {
-    "name": "Intel Core i9-10900 Processor",
-    "Score": 10
-    }
+    { "name": "Intel Core i9-10900 Processor", "Score": 1 },
+    { "name": "Intel Core i9-7980XE Processor", "Score": 2 },
+    { "name": "Intel Core i9-11900K Processor", "Score": 3 },
+    { "name": "Intel Core i9-9960X Processor", "Score": 4 },
+    { "name": "AMD Ryzen 9 3950X", "Score": 5 },
+    { "name": "AMD Ryzen 9 5900X", "Score": 6 },
+    { "name": "Intel Core i9-10850K Processor", "Score": 7 },
+    { "name": "Intel Core i9-10900KF Processor", "Score": 8 },
+    { "name": "Intel Core i9-10900K Processor", "Score": 9 },
+    { "name": "AMD Ryzen 9 5950X", "Score": 10 }
+
     ],
     "OS":[
         {"name":"Select your choice","Score":0},

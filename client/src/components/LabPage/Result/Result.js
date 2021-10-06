@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import './Style.css';
 import { useState ,useEffect} from 'react';
 
@@ -16,11 +17,15 @@ const Result=()=> {
     const [gcactive, setGCactive] = useState()
     const [gcactivate, setGCactivate] = useState()
 
-    var data=JSON.parse(sessionStorage.valuetobeChecked)
-    //console.log(data)
-    var score=JSON.parse(sessionStorage.valuetoget)
-    console.log(score)
+    if(sessionStorage.valuetobeChecked){
+        var data=JSON.parse(sessionStorage.valuetobeChecked)
+        //console.log(data)
+        var score=JSON.parse(sessionStorage.valuetoget)
+    }
+   
+
      useEffect(() => {
+        
         if(score.user.userramscore>=score.system.ramscore){
             setRAMactive(true)
             setRAMactivate(true)
@@ -52,12 +57,12 @@ const Result=()=> {
             setGCactive(false)
             setGCactivate(false)
         }
-     }, [])
+     },[data])
     
-
+     console.log(score.user.userGCscore, score.system.GCscore)
+    const percentage =100-(((score.user.userGCscore-score.system.GCscore)/score.user.userGCscore)*100);
     
-    
-    return (
+    return (<>
         <div className='hall-of-fame'>
             <div className="selected">
                 <h2>OPERATING SYSTEM</h2>
@@ -84,6 +89,16 @@ const Result=()=> {
                 <input className="user-data" type="text" value={data.user.usertext4} placeholder="User-Operating System" readOnly />
             </div>
         </div>
+        <div style={{ width: 200, height: 200 }}>
+        <CircularProgressbarWithChildren value={percentage}>
+            {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+            <img style={{ width: 40, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
+            <div style={{ fontSize: 12, marginTop: -5 }}>
+                <strong>{percentage}%</strong> mate
+            </div>
+        </CircularProgressbarWithChildren>;
+        </div>
+        </>
     )
 }
 export default Result;
