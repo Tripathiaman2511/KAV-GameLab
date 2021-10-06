@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import './Style.css'
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import Result from '../../Result/Result';
 
 const Defined=()=>{
 
@@ -26,6 +27,26 @@ const [usertext3, setUsertext3] = useState('');
 
 const [userGPU, setUserGPU] = useState([]);
 const [usertext4, setUsertext4] = useState('');
+var input={
+    text,
+    'system':{
+        
+        ram,
+        os,
+        GC,
+        cpu
+    },
+    'user':{
+        usertext1,
+        usertext2,
+        usertext3,
+        usertext4
+    }
+
+}
+
+
+
 
 /* *********************************************************************************************************************************************** */
 useEffect(() => {
@@ -120,6 +141,9 @@ const clear=()=>{
 
 
 /* *************************************************************************************************************************************8 */
+
+
+
 const addValue=()=>{
     const[cpuscore, ramscore, GCscore, osscore]=[names[indexof].Specs.CPU[0].Score, names[indexof].Specs.RAM[0].Score, names[indexof].Specs.GraphicCard[0].Score, names[indexof].Specs.OS[0].Score]
     const [usercpuscore, userramscore, userGCscore, userosscore]=[userCPU[indexcpu].Score , userRAM[indexram].Score, userGPU[indexGC].Score, userOS[indexos].Score]
@@ -152,6 +176,7 @@ const addValue=()=>{
             userosscore
         }
     }
+   
     sessionStorage.setItem("valuetobeChecked",JSON.stringify(resultChecker))
     sessionStorage.setItem("valuetoget",JSON.stringify(score))
     console.log(resultChecker)
@@ -223,7 +248,9 @@ const addValue=()=>{
            </div>
           
        </div>
-       <NavLink  to="../Result" onClick={addValue}>check ability</NavLink>
+       <div className="next-go">
+       <NavLink className="linkto"  to="/labpage/Result"  onClick={addValue}>check ability</NavLink>
+       </div>
        </div>
        
         </>

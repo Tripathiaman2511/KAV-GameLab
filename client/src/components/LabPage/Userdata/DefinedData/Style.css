@@ -17,9 +17,10 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 20px;
-    
+
     
 }
+
 .left-handle h4{
     text-align: center;
     background: rgb(126, 230, 198);
@@ -28,7 +29,7 @@
     width: 225px;
     margin: auto;
     border-radius: 20px;
-    box-shadow:0px 5px 12px  rgb(100, 100, 100) ;
+ 
 }
 .input-area{
     display: flex;
@@ -41,6 +42,7 @@
 .input{
     display: flex;
     flex-direction: column;
+ 
     
 }
 .search-data{
@@ -48,13 +50,15 @@
     padding: 10px;
     border: none;
     border-radius: 7px;
+    background-color: rgb(51, 51, 51);
+    color: aliceblue;
 }
 
 .search-button{
     margin: 5px;
     padding: 10px;
     border: none;
-    background: rgb(98, 0, 255);
+    background: rgba(0, 255, 242, 0.541);
     color: aliceblue;
 }
 .clear-button{
@@ -85,6 +89,7 @@
     border: none;
     border-radius: 7px;
 }
+
 .right-handle h4{
     text-align: center;
     background: rgb(126, 230, 198);
@@ -93,17 +98,20 @@
     width: 225px;
     margin: auto;
     border-radius: 20px;
-    box-shadow:0px 5px 12px  rgb(100, 100, 100) ;
+ 
 }
 .input-area-right{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-top:80px ;
+
     
 }
+
 .float{
     position: absolute;
+
 }
 .dataSet{
     width: 200px;
@@ -117,6 +125,7 @@
     background: rgb(255, 244, 244);
     color: #000;
 }
+
 .select{
     width: 240px;
     padding: 10px;
@@ -130,11 +139,26 @@
     width: 100%;
 }
 .upload-button{
-    background: rgb(66, 22, 187);
+    background: rgb(78, 78, 78);
     color: white;
     padding: 20px 40px;
     margin:0px 450px;
     border-radius: 15px;
     border:0px 0px 1px 400ms #000;
     
+}
+.next-go{
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.linkto{
+    color: #0088ff;
+    text-decoration: none;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+   
 }
