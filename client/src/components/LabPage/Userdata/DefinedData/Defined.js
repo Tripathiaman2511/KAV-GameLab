@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import './Style.css'
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import Result from '../../Result/Result';
+
 
 const Defined=()=>{
 

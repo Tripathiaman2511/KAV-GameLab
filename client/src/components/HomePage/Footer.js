@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button } from './Button';
 import './Footer.css';
-
+import $ from 'jquery'
 function Footer() {
+  
+      
+ 
     return (
         <div className='footer-container'>
             
@@ -25,20 +28,23 @@ function Footer() {
                </div>
             </section>
             <span className="block"></span>
-            {/* <section className="icon2">
+            <section className="icon2">
                     <div className="title">
-                        <p className="capital">K</p>  <p className="evaluate" style={{paddingRight:"50px"}} >KSHITIJ RAI</p>
+                        <p id="kr" className="capital" style={{marginRight:"50px",padding:"10px"}}>K</p>  
+                        <p  id="k" className="evaluate" style={{position:"absolute",marginLeft:"-30px"}} >KSHITIJ RAI</p>
                     </div>
                     <div className="title">
-                        <p className="capital">A</p> <p className="evaluate">AMAN TRIPATHI</p>
+                        <p id="at" className="capital" style={{marginRight:"50px",padding:"10px"}}>A</p> 
+                        <p id="a" className="evaluate" style={{position:"absolute" ,marginLeft:"-40px"}}>AMAN TRIPATHI</p>
                     </div>
                     <div className="title">
-                        <p className="capital">V</p>  <p className="evaluate">VIJESH CHAUDHARI</p>
+                        <p id="vc" className="capital" style={{padding:"10px"}}>V</p>  
+                        <p id="v" className="evaluate" style={{position:"absolute",marginLeft:"-40px"}}>VIJESH CHAUDHARI</p>
                     </div>
                    
                     
                     
-            </section> */}
+            </section>
            
         </div>
     )
