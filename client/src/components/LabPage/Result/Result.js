@@ -57,7 +57,7 @@ const Result=()=> {
             setGCactive(false)
             setGCactivate(false)
         }
-     },[data])
+     },[score.user.userramscore, score.user.userosscore, score.user.usercpuscore, score.user.userGCscore, score.system.ramscore, score.system.osscore, score.system.cpuscore, score.system.GCscore])
     
      console.log(score.user.userGCscore, score.system.GCscore)
     const percentage =100-(((score.user.userGCscore-score.system.GCscore)/score.user.userGCscore)*100);

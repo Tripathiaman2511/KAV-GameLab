@@ -1,7 +1,7 @@
 import React from 'react'
-import { Router,Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import './Navbar.css';
-import { Button } from '../HomePage/Button';
+
 import $ from 'jquery';
 
 function Navbar() {
@@ -32,7 +32,7 @@ function Navbar() {
                       </Link>
                   </li>
                   <li className='nav-item'>
-                      <Link to='/Game' className='nav-links' >
+                      <Link to='/Game'  className='nav-links' >
                           GAME
                       </Link>
                   </li>
@@ -41,15 +41,13 @@ function Navbar() {
                           LABS
                       </Link>
                    </li>  
-                  {/*  <li>
-                   <Button buttonStyle='btn--outline'>Sign Up</Button>    
-                   </li> */}
+                
                    
               </ul>
         
              
            </div>
-           /</nav>
+           </nav>
         
           
     )
