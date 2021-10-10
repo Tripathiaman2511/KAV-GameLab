@@ -11,8 +11,8 @@ const Labpage=()=>{
     
         <Switch>
 
-            <Route exact path="/labpage" component={Defined}><Defined/> </Route >
-            <Route exact path="/labpage/Result" component={Result}><Result/> </Route >
+            <Route exact path="/labpage" ><Defined/> </Route >
+            <Route exact path="/labpage/Result"><Result/> </Route >
         </Switch>
     
 </Router>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import './Footer.css';
-import $ from 'jquery'
+
 function Footer() {
   
       
@@ -13,7 +13,7 @@ function Footer() {
                 <p>
                     Collaborate with us!!!
                 </p>
-            <a href="https://github.com/Tripathiaman2511/KAV-GameLab" target="_blank"><i className="fab fa-github-alt"></i></a>
+            <a href="https://github.com/Tripathiaman2511/KAV-GameLab" rel="noreferrer" target="_blank"><i className="fab fa-github-alt"></i></a>
             </section>
             <span className="block"></span>
             <section className="footer-subscription">
