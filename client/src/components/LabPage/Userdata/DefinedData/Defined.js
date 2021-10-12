@@ -187,26 +187,26 @@ const addValue=()=>{
 
 
     return(
-        <><div className="container-F">
-       <div className="containerD">
+        <><div className="containF">
+       <div className="containD">
            <div className="left-handle">
                <h4>MINIMUM REQUIREMENT</h4>
-               <div className="input-area">
+               <div className="inputget">
                    
-                   <div className="search">
-                        <input type="text"  className="search-data" placeholder="Enter the game name" onChange={e=>onChaneHandler(e.target.value)} value={text}  />
-                        <button className="search-button" onClick={onpoplateHandler} >Search</button>
-                        <button className="clear-button"onClick={clear}>Clear</button>
-                        <div className="float">
+                   <div className="searchid">
+                        <input type="text"  className="searchdata" placeholder="Enter the game name" onChange={e=>onChaneHandler(e.target.value)} value={text}  />
+                        <button className="searchbu" onClick={onpoplateHandler} >Search</button>
+                        <button className="clearbu"onClick={clear}>Clear</button>
+                        <div className="position-absolute">
                             {suggestions && suggestions.map((suggestion,i)=>
-                        <div className="dataSet" key={i} onClick={()=>onSuggestHandler(suggestion.Name)}>{suggestion.Name}</div>                                
+                        <div className="dataSeto" key={i} onClick={()=>onSuggestHandler(suggestion.Name)}>{suggestion.Name}</div>                                
                         )}
                         </div>
                        
                         
                    </div>
                    
-                   <div className="input">
+                   <div className="inputo">
                         <input className="read-only-section" type="text" id="os"  value={os} placeholder="Operating System" readOnly />
                         <input className="read-only-section" type="text" id="cpu" value={cpu} placeholder="Processor" readOnly />
                         <input className="read-only-section" type="text" id="ram" value={ram} placeholder="RAM" readOnly />

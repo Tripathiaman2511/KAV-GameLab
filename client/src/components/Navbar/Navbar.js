@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link } from 'react-router-dom';
 import './Navbar.css';
-
 import $ from 'jquery';
 
 function Navbar() {
@@ -10,34 +9,34 @@ function Navbar() {
 
     $(function () {
         $(document).scroll(function () {
-          var $nav = $(".navbar");
+          var $nav = $(".navbarerie");
           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
       });
 
     return (
       
-          <nav className="navbar">
-           <div className="navbar-container">
-              <Link to="/Home" className="navbar-logo">
+          <nav className="navbarerie">
+           <div className="navbarcont">
+              <Link to="/Home" className="navblogi">
                   
                      <h1>KAV</h1>
-                    <p className="gamelab">GAMELAB</p>   
+                    <p>GAMELAB</p>   
               </Link> 
              
-              <ul className='nav-menu'>
-                  <li className='nav-item'>
-                      <Link to='/Home' className='nav-links'>
+              <ul className='navmen'>
+                  <li className='navit'>
+                      <Link to='/Home' className='navlin'>
                           HOME
                       </Link>
                   </li>
-                  <li className='nav-item'>
-                      <Link to='/Game'  className='nav-links' >
+                  <li className='navit'>
+                      <Link to='/Game'  className='navlin' >
                           GAME
                       </Link>
                   </li>
-                  <li className='nav-item'>
-                      <Link to='/labpage' className='nav-links' >
+                  <li className='navit'>
+                      <Link to='/labpage' className='navlin' >
                           LABS
                       </Link>
                    </li>  

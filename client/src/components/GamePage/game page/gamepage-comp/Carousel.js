@@ -6,6 +6,7 @@ import slide2 from '../Slides-images/slide2.jpeg';
 import slide3 from '../Slides-images/sllide3.jpeg';
 import slide4 from '../Slides-images/slide4.jpg';
 import Carousel from 'react-bootstrap/Carousel'
+
 export class BootstrapCarousel extends Component {
     render() {
         return (
