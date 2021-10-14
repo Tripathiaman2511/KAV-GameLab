@@ -10,6 +10,7 @@ import GtaV from "../GamecardPage/GamecardPage-comp/Gamedetails/Gta5.jsx";
 
 import Carousel from './gamepage-comp/Carousel'
 import Gamecards from "./gamepage-comp/Gamecards";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class Gamepage extends Component {
@@ -20,39 +21,36 @@ class Gamepage extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route exact path="/game/Valorant">
-                            
-                            <Valorantvideo />
+                            <Valorantvideo muted />
                             <Valorant />
                         </Route>
-                    </Switch>
-                    <Switch>
+
                         <Route exact path="/game/Gta-V">
-                            
-                            <Gta5video />
-                            <GtaV />
-                        </Route>
-                    </Switch>
-                    <Switch>
-                        <Route exact path="/game/Pubg">
-                            
-                            <Pubgvideo />
-                            <Pubg />
-                        </Route>
-                    </Switch>
-                    <Switch>
-                        <Route exact path="/game/Fortnite">
-                            
-                            <Fortnitevideo />
-                            <Fortnite />
-                        </Route>
-                    </Switch>
-                    <Switch >
-                        <Route exact path="/game">
-                            
+                           
+                           <Gta5video />
+                           <GtaV />
+                       </Route>
+
+                       <Route exact path="/game/Pubg">
+                           
+                           <Pubgvideo />
+                           <Pubg />
+                       </Route>
+
+                       <Route exact path="/game/Fortnite">
+                           
+                           <Fortnitevideo />
+                           <Fortnite />
+                       </Route>
+
+                       <Route exact path="/game">
                             <Carousel />
                             <Gamecards />
                         </Route>
+
                     </Switch>
+                    
+                    
                 </BrowserRouter>
             </div>
         )

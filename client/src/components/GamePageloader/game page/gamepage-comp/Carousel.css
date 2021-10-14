@@ -1,8 +1,14 @@
-img{
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.img{
   stroke-width: 100%;
-  opacity: 0.89;
+  opacity: 0.7;
   z-index: -1;
   background-color: rgb(71, 0, 104);
+  height: 674px;
 }
 .heading{
   text-align: left;
@@ -13,12 +19,13 @@ img{
 
 .introduction{
   text-align: left;
+  margin: 1rem 0rem;
   
 }
 
 .play{
+  text-decoration: none;
   border-radius: 8px;
-  text-align: left;
   text-align: left;
   margin: 0.2rem 0.2rem;
   padding: 0.5rem 1.2rem;
@@ -28,15 +35,15 @@ img{
   border-color: rgb(255, 255, 255);
 }
 .play:hover{
-  border-color: rgb(93, 15, 100);
-  color: rgb(93, 15, 100);
+  border-color: rgb(224, 144, 231);
+  color: rgb(217, 152, 223);
 }
 .caption{
   position: absolute;
   right: 15%;
-  bottom: 1.25rem;
+  bottom: 2rem;
   left: 15%;
-  padding: 2rem 2rem;
+  padding: 1.5rem 1.5rem;
   color: #fff;
   text-align: left;
   background: rgba(0, 0, 0, 0.3);
@@ -45,3 +52,14 @@ img{
   
 }
 
+.thumbs-wrapper{
+  display: none;
+}
+
+.control-dots{
+  display: none;
+}
+
+.slider-wrapper{
+  height: 674px;
+}

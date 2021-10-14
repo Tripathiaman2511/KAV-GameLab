@@ -1,14 +1,14 @@
 import React from "react";
-import video from '../../VideoPreview/Fortnite.mp4';
+import video from '../../VideoPreview/Valo.mp4';
 import './Gamevideo.css';
 
-function Fortnitevideo (){
+function Valorantvideo (){
     return(
         <div className="gamecontainer">
-        <video autoPlay className="video"  >
+        <video autoPlay muted className="videox">
             <source src={video}/>
         </video>
         </div>
     );
-};
-export default Fortnitevideo; 
+}; 
+export default Valorantvideo;

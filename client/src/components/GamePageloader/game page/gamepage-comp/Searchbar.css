@@ -13,7 +13,9 @@
     margin: 0rem 1rem;
     padding: 0.3rem 0.5rem;
 }
-
+.category > ul{
+    margin: 0rem 2rem;
+}
 .category > ul > a{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.678);

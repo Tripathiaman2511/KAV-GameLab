@@ -9,9 +9,9 @@
     margin: 0rem 1rem;
 }
 .type{
-    background-color: #1f1d1d;
+    background-color: #0f0f0f;
     color: white;
-    margin: 1.5rem -5rem;
+    margin: 1.5rem 1rem;
 }
 #trending{
     grid-column-start:1;
@@ -37,7 +37,7 @@
     margin: 1.5rem 1rem;
     padding: 1rem 1rem;
 }
-.cards{
+.vcards{
     margin: 0rem 1rem;
     padding: 2rem 0rem;
     justify-content: center;
@@ -78,19 +78,21 @@
     grid-column-end: 2;
     width: 65rem;
     height: 70rem;
-    margin: 0rem -5rem;
+    margin: 20px 60px;
 
 }
 .searchdiv{
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 4;
-    width: 23rem;
+    width: 22rem;
     height: 70rem;
     background-color: #1f1d1d;
-    margin: 0rem -4.3rem;
+    margin: 0rem 1rem;
 }
 
-.pagination > ul > li{
+.paginationbar > ul > li{
     text-decoration: none;
     color: white;
+    display: flex;
+    flex-direction: row;
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import cardimage from '../../../game page/Card-images/gta.jpg';
+import cardimage from '../../../game page/Card-images/fortnite.jpg';
 import './Gamedetails.css';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-const GtaV = () => {
+const Fortnite = () => {
 
     const [games, setgames] = useState(null);
     const [gamename, setgamename] = useState(null);
@@ -32,7 +32,7 @@ const GtaV = () => {
     // Assigning json object value to varibales
     useEffect(() => {
         
-            games && games.filter((game) => game.gamename === 'GTA-V').map((game) => (
+            games && games.filter((game) => game.gamename === 'FORTNITE').map((game) => (
                 <div className="game-details" key={game.id}>
                     {setgamename(game.gamename)}
                     {setDescription(game.Description)}
@@ -53,7 +53,8 @@ const GtaV = () => {
     return (
         <div className="mai-cont">
             <div className="gameimage">
-                <img src={cardimage} className="image" alt="Gta5" />
+            <a href={gamelink} className="download" target="_blank" rel="noreferrer">Download now</a>
+                <img src={cardimage} className="image" alt="Fortnite" />
             </div>
 
             {/* Game introduction */}
@@ -61,10 +62,11 @@ const GtaV = () => {
                 <h1 className="name">{gamename}</h1>
                 <p className="description">{Description}</p>
                 <h3 className="likes">
+                    
                     <svg xmlns="http://www.w3.org/2000/svg" className="likeicon" viewBox="0 0 48 48" width="32px" height="32px"><path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"/></svg>
                     {Totallikes}</h3>
-                <h5 className="gameprice">{price}</h5>
-                <a href={gamelink} className="download" target="_blank" rel="noreferrer">Download now</a>
+                 <h5 className="gameprice">{price}</h5>
+               
                 <hr />
                 <div className="requirement">
                     <ul className="minreq">
@@ -91,4 +93,4 @@ const GtaV = () => {
     )
 }
 
-export default GtaV
+export default Fortnite
