@@ -1,14 +1,14 @@
 import React from "react";
-import video from '../../VideoPreview/Gta5.mp4';
+import video from '../../VideoPreview/Fortnite.mp4';
 import './Gamevideo.css';
 
-function Gta5video (){
+function Fortnitevideo (){
     return(
         <div className="gamecontainer">
-        <video autoPlay className="video">
+        <video autoPlay loop muted className="videox"  >
             <source src={video}/>
         </video>
         </div>
     );
-}; 
-export default Gta5video;
+};
+export default Fortnitevideo; 

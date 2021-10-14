@@ -4,7 +4,7 @@ import './Gamevideo.css';
 function Pubgvideo (){
     return(
         <div className="gamecontainer">
-        <video autoPlay className="video">
+        <video autoPlay loop muted className="videox">
             <source src={video}/>
         </video>
         </div>

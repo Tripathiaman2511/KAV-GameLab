@@ -31,7 +31,7 @@ function Navbar() {
                       </Link>
                   </li>
                   <li className='navit'>
-                      <Link to='/Game'  className='navlin' >
+                      <Link to='/game'  className='navlin' >
                           GAME
                       </Link>
                   </li>

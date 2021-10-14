@@ -1,14 +1,14 @@
 import React from "react";
-import video from '../../VideoPreview/Valo.mp4';
+import video from '../../VideoPreview/Gta5.mp4';
 import './Gamevideo.css';
 
-function Valorantvideo (){
+function Gta5video (){
     return(
         <div className="gamecontainer">
-        <video autoPlay className="video">
+        <video autoPlay muted className="videox">
             <source src={video}/>
         </video>
         </div>
     );
 }; 
-export default Valorantvideo;
+export default Gta5video;
