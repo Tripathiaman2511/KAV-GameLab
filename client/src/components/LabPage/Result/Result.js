@@ -16,7 +16,8 @@ const Result=()=> {
 
     const [gcactive, setGCactive] = useState()
     const [gcactivate, setGCactivate] = useState()
-
+    const [percentage, setPercentage]= useState()
+ var count=0;
     if(sessionStorage.valuetobeChecked){
         var data=JSON.parse(sessionStorage.valuetobeChecked)
         //console.log(data)
@@ -29,6 +30,7 @@ const Result=()=> {
         if(score.user.userramscore>=score.system.ramscore){
             setRAMactive(true)
             setRAMactivate(true)
+            count+=1;
         }else{
             setRAMactive(false)
             setRAMactivate(false)
@@ -37,6 +39,7 @@ const Result=()=> {
         if(score.user.userosscore>=score.system.osscore){
             setOSactive(true)
             setOSactivate(true)
+            count+=1;
         }else{
             setOSactive(false)
             setOSactivate(false)
@@ -45,6 +48,7 @@ const Result=()=> {
         if(score.user.usercpuscore>=score.system.cpuscore){
             setCPUactive(true)
             setCPUactivate(true)
+            count+=1;
         }else{
             setCPUactive(false)
             setCPUactivate(false)
@@ -53,15 +57,17 @@ const Result=()=> {
         if(score.user.userGCscore>=score.system.GCscore){
             setGCactive(true)
             setGCactivate(true)
+            count+=1;
         }else{
             setGCactive(false)
             setGCactivate(false)
         }
+        console.log(count);
+    setPercentage((count/4)*100)
+    console.log(percentage)
      },[score.user.userramscore, score.user.userosscore, score.user.usercpuscore, score.user.userGCscore, score.system.ramscore, score.system.osscore, score.system.cpuscore, score.system.GCscore])
-    
-     console.log(score.user.userGCscore, score.system.GCscore)
-    const percentage =100-(((score.user.userGCscore-score.system.GCscore)/score.user.userGCscore)*100);
-    
+
+   
     return (<>
         <div className='hall-of-fame'>
             <div className="selected">
@@ -89,15 +95,24 @@ const Result=()=> {
                 <input className="user-data" type="text" value={data.user.usertext4} placeholder="User-Operating System" readOnly />
             </div>
         </div>
-        <div style={{ width: 200, height: 200 }}>
+        
+        <div className="yourresult">
+        <h3>RESULT</h3>
+        <div className="result">
+        <div style={{ width: 200, height: 200}}>
         <CircularProgressbarWithChildren value={percentage}>
             {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
             <img style={{ width: 40, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
             <div style={{ fontSize: 12, marginTop: -5 }}>
                 <strong>{percentage}%</strong> mate
             </div>
-        </CircularProgressbarWithChildren>;
+        </CircularProgressbarWithChildren>
         </div>
+        <div className="conclusion"><h3>Congratulation</h3></div>
+        </div>
+        
+        </div>
+        
         </>
     )
 }

@@ -49,21 +49,26 @@ const GtaV = () => {
             ))
         
     })
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div className="mai-cont">
             <div className="gameimage">
             <a href={gamelink} className="download" target="_blank" rel="noreferrer">Download now</a>
                 <img src={cardimage} className="image" alt="Gta5" />
+                <h3 className="likes">
+                <i className="fas fa-heart" id="heart"></i>
+                    {Totallikes}
+                <i class="fas fa-heart-broken" id="disheart"></i>43</h3>
             </div>
 
             {/* Game introduction */}
             <div className="intro">
                 <h1 className="name">{gamename}</h1>
                 <p className="description">{Description}</p>
-                <h3 className="likes">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="likeicon" viewBox="0 0 48 48" width="32px" height="32px"><path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"/></svg>
-                    {Totallikes}</h3>
+                
                 <h5 className="gameprice">{price}</h5>
                
                 <hr />

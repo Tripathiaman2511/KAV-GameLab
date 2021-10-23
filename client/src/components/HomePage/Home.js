@@ -1,18 +1,28 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import HeroSection from './HeroSection';
-import{ BrowserRouter as Router,Route} from 'react-router-dom';
+import{ BrowserRouter as Router,Switch ,Route} from 'react-router-dom';
 import Cards from './Cards';
 import './Home.css'
 
+import Gamepage from '../GamePageloader/game page/Gamepage';
+
 const Home=()=>{
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     return(
 <>
 <Router>
-    
-        <Route exact path="/Home" component={HeroSection}>
+  <Switch>
+  <Route exact path="/Home" >
         <HeroSection/>
         <Cards/>
         </Route>
+        <Route exact path="/game" exact component ={Gamepage}/>
+            
+      
+      </Switch>  
+       
         
 </Router>
      

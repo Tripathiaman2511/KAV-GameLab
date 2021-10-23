@@ -1,4 +1,5 @@
-{"games": [
+{
+    "games": [
     {
  "id": 1,
  "gamename": "Valorant",
@@ -132,7 +133,7 @@
             }],
             "OS":[{
                 "name":"Windows 7/8/10-64-bit",
-                "Score":0
+                "Score":1
             }],
             "CPU":[{
                 "name":"Intel Core i5-4460",
@@ -154,7 +155,7 @@
             }],
             "OS":[{
                 "name":"Windows 7/8/10-64-bit",
-                "Score":0
+                "Score":1
             }],
             "CPU":[{
                 "name":"Intel Core i3-6100 Processor",

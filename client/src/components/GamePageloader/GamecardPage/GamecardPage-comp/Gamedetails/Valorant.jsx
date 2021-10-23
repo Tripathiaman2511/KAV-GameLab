@@ -50,15 +50,19 @@ const Valorant = () => {
         
     })
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div className="mai-cont">
             
             <div className="gameimage">
-            <a href={gamelink} className="download" target="_blank" rel="noreferrer">Download now</a>
+            <a href={gamelink} className="download" target="_blank" rel="noreferrer">DOWNLOAD</a>
                 <img src={cardimage} className="image" alt="valorant" />
                 <h3 className="likes">
                 <i className="fas fa-heart" id="heart"></i>
-                    {Totallikes}</h3>
+                    {Totallikes}
+                <i class="fas fa-heart-broken" id="disheart"></i>43</h3>
             </div>
 
             {/* Game introduction */}
@@ -68,7 +72,8 @@ const Valorant = () => {
                 
                 <h5 className="gameprice">{price}</h5>
                 
-             
+             <hr/>
+
                 <div className="requirement">
                     <ul className="minreq">
                         <h2>Minimum Requirements</h2>
