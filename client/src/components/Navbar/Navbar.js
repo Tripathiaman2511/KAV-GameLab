@@ -1,8 +1,8 @@
 import React from 'react'
-import {Link } from 'react-router-dom';
+import {NavLink, } from 'react-router-dom';
 import './Navbar.css';
 import $ from 'jquery';
-
+import mainlogo from './campfire (1).png'
 function Navbar() {
   
 
@@ -15,30 +15,31 @@ function Navbar() {
       });
 
     return (
-      
+        
           <nav className="navbarerie">
            <div className="navbarcont">
-              <Link to="/Home" className="navblogi">
-                  
-                     <h1>KAV</h1>
+
+              <NavLink to="/Home" className="navblogi">
+              <img src={mainlogo} alt="" />
+                     
                     <p>GAMELAB</p>   
-              </Link> 
+              </NavLink> 
              
               <ul className='navmen'>
                   <li className='navit'>
-                      <Link to='/Home' className='navlin'>
+                      <NavLink to='/Home' className='navlin'>
                           HOME
-                      </Link>
+                      </NavLink>
                   </li>
                   <li className='navit'>
-                      <Link to='/game'  className='navlin' >
+                      <NavLink to='/game'  className='navlin' >
                           GAME
-                      </Link>
+                      </NavLink>
                   </li>
                   <li className='navit'>
-                      <Link to='/labpage' className='navlin' >
+                      <NavLink to='/labpage' className='navlin' >
                           LABS
-                      </Link>
+                      </NavLink>
                    </li>  
                 
                    
@@ -47,8 +48,7 @@ function Navbar() {
              
            </div>
            </nav>
-        
-          
+           
     )
 }
 

@@ -49,6 +49,9 @@ const Pubg = () => {
             ))
         
     })
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div className="mai-cont">
@@ -57,7 +60,8 @@ const Pubg = () => {
                 <img src={cardimage} className="image" alt="Pubg" />
                 <h3 className="likes">
                 <i className="fas fa-heart" id="heart"></i>
-                    {Totallikes}</h3>
+                    {Totallikes}
+                    <i class="fas fa-heart-broken" id="disheart"></i>43</h3>
             </div>
 
             {/* Game introduction */}

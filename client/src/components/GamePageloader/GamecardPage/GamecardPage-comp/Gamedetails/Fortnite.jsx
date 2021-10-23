@@ -3,7 +3,7 @@ import cardimage from '../../../game page/Card-images/fortnite.jpg';
 import './Gamedetails.css';
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Fortnite = () => {
 
@@ -28,6 +28,10 @@ const Fortnite = () => {
         }
         loadname();
     }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     // Assigning json object value to varibales
     useEffect(() => {
@@ -55,16 +59,17 @@ const Fortnite = () => {
             <div className="gameimage">
             <a href={gamelink} className="download" target="_blank" rel="noreferrer">Download now</a>
                 <img src={cardimage} className="image" alt="Fortnite" />
+                <h3 className="likes">
+                <i className="fas fa-heart" id="heart"></i>
+                    {Totallikes}
+                <i class="fas fa-heart-broken" id="disheart"></i>43</h3>
             </div>
 
             {/* Game introduction */}
             <div className="intro">
                 <h1 className="name">{gamename}</h1>
                 <p className="description">{Description}</p>
-                <h3 className="likes">
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" className="likeicon" viewBox="0 0 48 48" width="32px" height="32px"><path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"/></svg>
-                    {Totallikes}</h3>
+               
                  <h5 className="gameprice">{price}</h5>
                
                 <hr />
@@ -86,7 +91,7 @@ const Fortnite = () => {
 
                 {/* Link for checking game requirements */}
                 <div className="checkclick">
-                    <Link className="check" to="/labpage">Can i run it?</Link>
+                    <NavLink className="check" to="/labpage">Can i run it?</NavLink>
                 </div>
             </div>
         </div>

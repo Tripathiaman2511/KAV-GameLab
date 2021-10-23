@@ -4,7 +4,6 @@ import card2 from '../Card-images/pubg-card.jpeg';
 import card3 from '../Card-images/fortnite.jpg';
 import card4 from '../Card-images/gta.jpg';
 import './Gamecards.css';
-import Searchbar from "./Searchbar.js";
 
 import {Link} from'react-router-dom';
 
