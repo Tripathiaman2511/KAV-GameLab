@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/KAV-GameLab/static/css/main.209c8020.chunk.css",
-    "main.js": "/KAV-GameLab/static/js/main.67394e2c.chunk.js",
-    "main.js.map": "/KAV-GameLab/static/js/main.67394e2c.chunk.js.map",
+    "main.js": "/KAV-GameLab/static/js/main.58d4e4b3.chunk.js",
+    "main.js.map": "/KAV-GameLab/static/js/main.58d4e4b3.chunk.js.map",
     "runtime-main.js": "/KAV-GameLab/static/js/runtime-main.096867dc.js",
     "runtime-main.js.map": "/KAV-GameLab/static/js/runtime-main.096867dc.js.map",
     "static/css/2.4f14f7a4.chunk.css": "/KAV-GameLab/static/css/2.4f14f7a4.chunk.css",
@@ -40,6 +40,6 @@
     "static/css/2.4f14f7a4.chunk.css",
     "static/js/2.d5e388d9.chunk.js",
     "static/css/main.209c8020.chunk.css",
-    "static/js/main.67394e2c.chunk.js"
+    "static/js/main.58d4e4b3.chunk.js"
   ]
 }
