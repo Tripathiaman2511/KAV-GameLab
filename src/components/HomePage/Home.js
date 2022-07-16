@@ -14,7 +14,7 @@ const Home=()=>{
 <>
 <Router>
   <Switch>
-  <Route exact path="/" >
+  <Route exact path="/KAV-GameLab/" >
         <HeroSection/>
         <Cards/>
         </Route>
