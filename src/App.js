@@ -17,7 +17,7 @@ const App=()=>{
        
     
         <Switch>
-            <Route exact path="/" render={()=><Home/>}/>
+            <Route exact path="/KAV-GameLab/" render={()=><Home/>}/>
             <Route exact path="/game"  render={()=><Gamepage/>}/>
             <Route exact path="/labpage"  render={()=><Labpage/>}/>
             

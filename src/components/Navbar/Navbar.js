@@ -19,7 +19,7 @@ function Navbar() {
           <nav className="navbarerie">
            <div className="navbarcont">
 
-              <NavLink to="/" className="navblogi">
+              <NavLink to="/KAV-GameLab/" className="navblogi">
               <img src={mainlogo} alt="" />
                      
                     <p>GAMELAB</p>   
@@ -27,7 +27,7 @@ function Navbar() {
              
               <ul className='navmen'>
                   <li className='navit'>
-                      <NavLink to='/' className='navlin'>
+                      <NavLink to='/KAV-GameLab/' className='navlin'>
                           HOME
                       </NavLink>
                   </li>
