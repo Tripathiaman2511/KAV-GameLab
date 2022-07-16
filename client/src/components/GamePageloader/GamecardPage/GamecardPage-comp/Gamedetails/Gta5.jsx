@@ -3,7 +3,7 @@ import cardimage from '../../../game page/Card-images/gta.jpg';
 import './Gamedetails.css';
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const GtaV = () => {
 
@@ -90,7 +90,7 @@ const GtaV = () => {
 
                 {/* Link for checking game requirements */}
                 <div className="checkclick">
-                    <Link className="check" to="/labpage">Can i run it?</Link>
+                    <NavLink className="check" to="/labpage">Can i run it?</NavLink>
                 </div>
             </div>
         </div>

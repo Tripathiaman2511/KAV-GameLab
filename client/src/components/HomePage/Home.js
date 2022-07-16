@@ -14,11 +14,11 @@ const Home=()=>{
 <>
 <Router>
   <Switch>
-  <Route exact path="/Home" >
+  <Route exact path="/" >
         <HeroSection/>
         <Cards/>
         </Route>
-        <Route exact path="/game" exact component ={Gamepage}/>
+        <Route exact path="/game" component ={Gamepage}/>
             
       
       </Switch>  

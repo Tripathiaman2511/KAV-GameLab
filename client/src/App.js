@@ -14,9 +14,10 @@ const App=()=>{
     return(<>
     <Router>
         <Navbar/>
+       
     
         <Switch>
-            <Route exact path="/Home" render={()=><Home/>}/>
+            <Route exact path="/" render={()=><Home/>}/>
             <Route exact path="/game"  render={()=><Gamepage/>}/>
             <Route exact path="/labpage"  render={()=><Labpage/>}/>
             
