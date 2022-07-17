@@ -2,7 +2,11 @@ import React,{useState,useEffect} from 'react'
 import './Style.css'
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-
+import { GAME} from '../../../../Data/game';
+import { RAM } from '../../../../Data/ram';
+import { OS } from '../../../../Data/os';
+import { GPU } from '../../../../Data/gpu';
+import { CPU } from '../../../../Data/cpu';
 
 const Defined=()=>{
 
@@ -44,42 +48,16 @@ var input={
     }
 
 }
-
-
-
-
 /* *********************************************************************************************************************************************** */
 useEffect(() => {
-   const loadName=async()=>{
-       const response =await axios.get('http://localhost:8000/game')
-       setNames(response.data)  
-    }
-    const loadOS=async()=>{
-        const response =await axios.get('http://localhost:8000/OS')
-        setUserOS(response.data)
-        
-    }
-    const loadCPU=async()=>{
-        const response =await axios.get('http://localhost:8000/CPU')
-        setUserCPU(response.data)  
-    }
-    const loadRAM=async()=>{
-        const response =await axios.get('http://localhost:8000/RAM')
-        setUserRAM(response.data)  
-    }
-    const loadGC=async()=>{
-        const response =await axios.get('http://localhost:8000/GPU')
-        setUserGPU(response.data)  
-    }  
-    
-   loadName();
-   loadOS();
-   loadCPU();
-   loadRAM();
-   loadGC();
-  
-   
+    setNames(GAME)
+setUserRAM(RAM)
+setUserCPU(CPU)
+setUserOS(OS)
+setUserGPU(GPU)
 }, [])
+
+
 /* extracting index of searched name */
 const indexof=names.findIndex((name,index)=>{  
     return name.Name===text 

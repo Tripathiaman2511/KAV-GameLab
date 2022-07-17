@@ -4,6 +4,7 @@ import './Gamedetails.css';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { NavLink } from "react-router-dom";
+import { GAMES } from "../../../../../Data/games";
 
 const Valorant = () => {
 
@@ -22,11 +23,9 @@ const Valorant = () => {
 
     // Getting data from json server
     useEffect(() => {
-        const loadname = async () => {
-            const response = await axios.get('http://localhost:8000/games');
-            setgames(response.data);
-        }
-        loadname();
+        
+        setgames(GAMES)
+        
     }, []);
 
     // Assigning json object value to varibales

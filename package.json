@@ -30,7 +30,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "concurrently \"json-server --port 8000 --watch Data.json\" \"react-scripts start \"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     
     "test": "react-scripts test",
